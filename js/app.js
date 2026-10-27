@@ -1,5 +1,15 @@
 const m = document.getElementById("menu");
-document.getElementById("burger").onclick = () => m.classList.toggle("open");
+const burger = document.getElementById("burger");
+
+burger.onclick = () => m.classList.toggle("open");
+
+// Chiude il menu mobile dopo il click su un link
+m.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        m.classList.remove("open");
+    });
+});
+
 function setLang(l) {
     localStorage.setItem("lang", l);
     document
