@@ -14,102 +14,74 @@
     <body>
         <canvas id="network"></canvas>
         <header class="topbar">
-            <div class="brand">D.C.C.</div>
+            <div class="brand">Dott. Carolina Camurati</div>
             <button id="burger">☰</button>
             <nav id="menu">
-                <a href="#about">About</a><a href="#signals">Signals</a><a href="#gallery">Frames</a
-                ><a href="#voices">Echoes</a><a href="#contact">Contact</a><button onclick="setLang('it')">IT</button
-                ><button onclick="setLang('en')">EN</button>
+                <a href="#about">About</a>
+				<a href="#signals">Segnali</a>
+				<a href="#gallery">Frammenti</a>
+				<a href="#contact">Contatto</a>
+				<!--<button onclick="setLang('it')">IT</button>
+                <button onclick="setLang('en')">EN</button>-->
             </nav>
         </header>
         <section class="hero">
             <div>
-                <h1>D.C.C.</h1>
-                <p
-                    data-it="Visioni sotterranee. Paesaggi interiori. Frammenti di luce."
-                    data-en="Underground visions. Inner landscapes. Fragments of light."
-                >
-                    Visioni sotterranee. Paesaggi interiori. Frammenti di luce.
-                </p>
+                <h1>DOTT. CAROLINA CAMURATI</h1>
+                <p>Questo spazio nasce dall'incontro tra ricerca interiore, creatività, immaginazione e presenza.</p>
+				<p>Non è una destinazione, ma un percorso aperto.</p>
             </div>
         </section>
         <section id="about" class="panel">
             <h2>About</h2>
-            <p
-                data-it="Non tutto deve essere spiegato. Alcune presenze restano sospese tra luce, memoria e trasformazione."
-                data-en="Not everything needs explanation. Some presences remain suspended between light, memory and transformation."
-            >
-                Non tutto deve essere spiegato.
+            <p>Non tutto deve essere spiegato.
             </p>
         </section>
         <section id="signals" class="panel glass">
-            <h2>Signals</h2>
+            <h2>Segnali</h2>
             <div class="cards">
                 <article>
                     <h3>Psychology</h3>
-                    <p
-                        data-it="Le parole arrivano dopo. Le sensazioni quasi sempre prima."
-                        data-en="Words arrive later. Sensations usually come first."
-                    ></p>
+                    <p>Le parole arrivano dopo. Le sensazioni quasi sempre prima</p>
                 </article>
                 <article>
                     <h3>Motivation</h3>
-                    <p
-                        data-it="Il cambiamento inizia spesso senza rumore."
-                        data-en="Change often starts without noise."
-                    ></p>
+                    <p>Il cambiamento inizia spesso senza rumore.</p>
                 </article>
                 <article>
                     <h3>Wellbeing</h3>
-                    <p data-it="Respirare, osservare, rallentare." data-en="Breathe, observe, slow down."></p>
+                    <p>Respirare, osservare, rallentare</p>
                 </article>
                 <article>
                     <h3>Psychedelia</h3>
-                    <p data-it="Non evasione. Prospettiva." data-en="Not escape. Perspective."></p>
+                    <p>Non evasione. Prospettiva.</p>
                 </article>
             </div>
         </section>
         <section id="gallery" class="panel">
-            <h2 data-it="Frammenti" data-en="Fragments">Frammenti</h2>
+            <h2>Frammenti</h2>
             <div class="gallery">
                 <div class="img a"></div>
                 <div class="img b"></div>
                 <div class="img c"></div>
             </div>
         </section>
-        <section id="voices" class="panel glass">
-            <h2 data-it="Echi" data-en="Voices">Echi</h2>
-            <p
-                data-it="Conversazioni. Appunti. Collaborazioni. Voci."
-                data-en="Conversations. Notes. Collaborations. Voices more than headlines."
-            ></p>
-        </section>
         <section id="contact" class="panel">
-            <h2 data-it="Contatto" data-en="Contact">Contatto</h2>
-			<p
-                data-it="Da qualche parte tra conversazione, sperimentazione e trasformazione silente."
-                data-en="Somewhere between conversation, experimentation and quiet transformation."
-            ></p>
-            <br />
-            <p data-it="Milan · Italy" data-en="Milan · Italy"></p>
-            <p data-it="email@email.com" data-en="email@email.com"></p>
-            <p
-                data-it="Per appuntamento. Per intuizione. Per risonanza."
-                data-en="By appointment. By intuition. By resonance."
-            ></p>
-
+            <h2>Contatto</h2>
+			<p>Per appuntamento. Per intuizione. Per risonanza.</p>
+			
+            <p>Milano · Porta Venezia</p>
+            <p>email@email.com</p>
+			<p>+39 123456789</p>
             <form id="contactForm" class="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required />
-
-                <input type="email" id="email" placeholder="Your Email" required />
-
-                <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
-
-                <button type="submit">Send Message</button>
-
+                <input type="text" id="name" placeholder="Nome" required />
+                <input type="email" id="email" placeholder="Email" required />
+                <textarea id="message" rows="6" placeholder="Messaggio" required></textarea>
+                <button type="submit">Invia</button>
                 <div id="formStatus"></div>
             </form>
         </section>
+		
         <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser.min.jsscript"></script>
