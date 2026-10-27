@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  background: #070a0d;
+  color: #eef;
+  font-family: Inter, sans-serif;
+  overflow-x: hidden;
+}
+#network {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(5, 8, 10, 0.45);
+  backdrop-filter: blur(12px);
+  z-index: 20;
+}
+.brand {
+  letter-spacing: 2px;
+}
+#burger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+}
+#menu {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+#menu a,
+#menu button {
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 10px;
+}
+.hero,
+.panel {
+  padding: 120px 8vw;
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero h1 {
+  font-family: Space Grotesk;
+  font-size: clamp(4rem, 9vw, 7rem);
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+.panel {
+  min-height: 80vh;
+}
+.panel h2 {
+  font-family: Space Grotesk;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-radius: 28px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.cards article {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 24px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.img {
+  height: 65vh;
+  border-radius: 28px;
+  background-size: cover;
+}
+.a {
+  background: linear-gradient(135deg, #6ad9ff, #d93cff);
+}
+.b {
+  background: linear-gradient(135deg, #98ff98, #6ad9ff);
+}
+.c {
+  background: linear-gradient(135deg, #d93cff, #ffcf6a);
+}
+
+@media (max-width: 900px) {
+  #burger {
+    display: block;
+  }
+
+  #menu {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 20px;
+    background: #081018;
+  }
+
+  #menu.open {
+    display: flex;
+  }
+
+  .cards,
+  .gallery,
+  .portal {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}
+/* CONTACT */
+
+.portal {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+
+  margin-top: 60px;
+  align-items: start;
+}
+
+.portal-info {
+  max-width: 420px;
+}
+
+.portal-info h3 {
+  font-family: Space Grotesk;
+  font-size: 2rem;
+
+  margin-bottom: 30px;
+}
+
+.portal-info p {
+  margin-bottom: 18px;
+  line-height: 1.9;
+  color: rgba(238, 238, 255, 0.75);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 18px 24px;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: #eef;
+
+  font-size: 1rem;
+
+  backdrop-filter: blur(12px);
+
+  transition: 0.35s ease;
+}
+
+.contact-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+
+  border-color: rgba(106, 217, 255, 0.45);
+
+  box-shadow: 0 0 30px rgba(106, 217, 255, 0.12);
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.contact-form button {
+  align-self: flex-start;
+
+  padding: 16px 34px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 10px 30px rgba(106, 217, 255, 0.15);
+}
+
+#formStatus {
+  min-height: 24px;
+
+  color: #98ff98;
+
+  font-size: 0.95rem;
+}
